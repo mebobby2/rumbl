@@ -1,5 +1,9 @@
 # Rumbl
 
+# Set up
+* mix deps.get
+* mix ecto.create
+
 # Phoenix Notes
 
 ## Phoenix plugs
