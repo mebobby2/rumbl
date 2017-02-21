@@ -3,6 +3,7 @@
 # Set up
 * mix deps.get
 * mix ecto.create
+* mix phoenix.server
 
 # Phoenix Notes
 
