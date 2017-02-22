@@ -12,6 +12,5 @@
 Web applications in Phoenix are pipelines of plugs. The basic flow of traditional applications is endpoint, router, pipeline, controller.
 
 # Upto
-page 182
-Managing Registration Changesets
-
+page 190
+The Anatomy of a Plug
