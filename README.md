@@ -27,5 +27,5 @@ form_for @conn...
 
 
 # Upto
-page 190
-The Anatomy of a Plug
+page 210
+Chapter 6
