@@ -27,5 +27,5 @@ form_for @conn...
 
 
 # Upto
-page 210
-Chapter 6
+page 242
+Chapter 7
