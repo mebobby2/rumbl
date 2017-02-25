@@ -81,17 +81,3 @@ defmodule Rumbl.VideoControllerTest do
     end
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
