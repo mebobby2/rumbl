@@ -52,6 +52,9 @@ On the other hand, let’s take the user has_many :videos relationship. Our appl
 
 In such cases, the user can do nothing to fix the error, so crashing is the best option. Something unexpected really happened. But that’s OK. We know Elixir was designed to handle failures, and Phoenix allows us to convert them into nice status pages. Furthermore, we also recommend setting up a notification system that aggregates and emails errors coming from your application, so you can discover and act on potential bugs when your software is running in production.
 
+## Use correct isolation in testing
+
+For example, in your page_controller_test, we called our controller with get conn, "/" rather than calling the index action on our controller directly. This practice gives us the right level of isolation because we’re using the controller the same way Phoenix does.
 
 # Upto
 page 302
