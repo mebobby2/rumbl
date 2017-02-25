@@ -40,7 +40,19 @@ However, someone could delete the category between steps 2 and 3, allowing us to
 
 Ecto will throw Ecto.ConstraintError if any of the db contraints fail. You can use unique_constraint, assoc_constraint etc inside the changesets to convert Ecto.ConstraintError into changeset errors. That way, your application does not crash on Ecto.ContraintErrors.
 
+the *_constraint changeset functions are useful when the constraint being mapped is triggered by external data, often as part of the user request. Using changeset constraints only makes sense if the error message can be something the user can take action on.
+
+Example:
+
+When we added a foreign_key_constraint to the video belongs_to :category relationship, we knew we wanted to allow the user to choose the video category later on. If a category is removed at some point between the user loading the page and submitting the request to publish the video, setting the changeset constraint allows us to show a nice error message telling the user to pick something else.
+
+This isn’t so uncommon. Maybe you’ve started to publish a new video on Friday at 5:00 p.m. but decide to finish the process next Monday. Someone has the whole weekend to remove a category, making your form data outdated.
+
+On the other hand, let’s take the user has_many :videos relationship. Our application is the one responsible for setting up the relationship between videos and users. If a constraint is violated, it can only be a bug in our application or a data-integrity issue.
+
+In such cases, the user can do nothing to fix the error, so crashing is the best option. Something unexpected really happened. But that’s OK. We know Elixir was designed to handle failures, and Phoenix allows us to convert them into nice status pages. Furthermore, we also recommend setting up a notification system that aggregates and emails errors coming from your application, so you can discover and act on potential bugs when your software is running in production.
+
 
 # Upto
-page 242
-Chapter 7
+page 302
+Chapter 8
