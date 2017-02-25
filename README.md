@@ -57,5 +57,5 @@ In such cases, the user can do nothing to fix the error, so crashing is the best
 For example, in your page_controller_test, we called our controller with get conn, "/" rather than calling the index action on our controller directly. This practice gives us the right level of isolation because we’re using the controller the same way Phoenix does.
 
 # Upto
-page 302
-Chapter 8
+page 360
+Part 2 - Writing Interactive and Maintainable Applications
