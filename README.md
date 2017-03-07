@@ -67,5 +67,5 @@ Phoenix wraps the contents for each JavaScript file you add to web/static/js in 
 Since each file is wrapped in a function, it won’t be automatically executed by browsers unless you explicitly import it in your app.js file. In this way, the app.js file is like a manifest. It’s where you import and wire up your JavaScript dependencies.
 
 # Upto
-page 360
-Part 2 - Writing Interactive and Maintainable Applications
+page 379
+We want our videos to have a unique URL-friendly identifier, called a slug
