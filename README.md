@@ -56,6 +56,16 @@ In such cases, the user can do nothing to fix the error, so crashing is the best
 
 For example, in your page_controller_test, we called our controller with get conn, "/" rather than calling the index action on our controller directly. This practice gives us the right level of isolation because we’re using the controller the same way Phoenix does.
 
+## web/static/assets
+
+We put everything in assets that doesn’t need to be transformed by Brunch. The build tool will simply copy those assets just as they are to priv/static, where they’ll be served by Phoenix.Static in our endpoint.
+
+## web/static/js
+
+Phoenix wraps the contents for each JavaScript file you add to web/static/js in a function and collects them into priv/static/js/app.js. That’s the file loaded by browsers at the end of web/templates/layout.html.eex when we call static_path(@conn, "/js/app.js").
+
+Since each file is wrapped in a function, it won’t be automatically executed by browsers unless you explicitly import it in your app.js file. In this way, the app.js file is like a manifest. It’s where you import and wire up your JavaScript dependencies.
+
 # Upto
 page 360
 Part 2 - Writing Interactive and Maintainable Applications
