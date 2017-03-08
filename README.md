@@ -78,5 +78,5 @@ Whereas request/response interactions are stateless, conversations in a long-run
 
 
 # Upto
-page 404
-For request/response–type applications, session-based authentication makes sense. For channels, token authentication works
+page 416
+We have a problem, though. Refresh your page, and the messages disappear from the UI.
