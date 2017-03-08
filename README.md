@@ -72,6 +72,11 @@ Because Ecto separates changesets from the definition of a given record, we can 
 
 Changesets can validate data—for example, the length or the format of a field—on the fly, but validations that depend on data integrity are left to the database in the shape of constraints.
 
+## Channels
+
+Whereas request/response interactions are stateless, conversations in a long-running process can be stateful. This means that for more-sophisticated user interactions like interactive pages or multiplayer games, you don’t have to work so hard to keep track of the conversation by using cookies, databases, or the like. Each call to a channel simply picks up where the last one left off.
+
+
 # Upto
 page 379
 Extending Phoenix with Protocols
