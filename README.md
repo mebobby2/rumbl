@@ -66,6 +66,12 @@ Phoenix wraps the contents for each JavaScript file you add to web/static/js in 
 
 Since each file is wrapped in a function, it won’t be automatically executed by browsers unless you explicitly import it in your app.js file. In this way, the app.js file is like a manifest. It’s where you import and wire up your JavaScript dependencies.
 
+## Ecto Changesets
+
+Because Ecto separates changesets from the definition of a given record, we can have a separate change policy for each type of change. We could easily add a JSON API that creates videos, including the slug field, for example.
+
+Changesets can validate data—for example, the length or the format of a field—on the fly, but validations that depend on data integrity are left to the database in the shape of constraints.
+
 # Upto
 page 379
-We want our videos to have a unique URL-friendly identifier, called a slug
+Extending Phoenix with Protocols
