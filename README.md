@@ -78,5 +78,5 @@ Whereas request/response interactions are stateless, conversations in a long-run
 
 
 # Upto
-page 399
-Our channels are functioning but not doing any real work yet. Let’s use them to build our real-time annotations.
+page 404
+For request/response–type applications, session-based authentication makes sense. For channels, token authentication works
