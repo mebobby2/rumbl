@@ -137,7 +137,11 @@ end
 ```
 If we use a after timeout of 0 seconds, no code in the receive blocks will ever be executed as it will jump straight into the after block when we enter the receive block.
 
+## Tasks vs Agents
+
+Tasks wrap behavior and agents encapsulate state.
+
 
 # Upto
-page 434
-Chapter 11
+page 494
+Chapter 12
