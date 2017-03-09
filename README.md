@@ -123,6 +123,20 @@ defp spawn_query(backend, query, limit) do
 end
 ```
 
+## Timeout of 0
+```
+def test do
+  receive do
+    :hello ->
+      IO.puts "hello, world!" # will never be executed
+  after
+    0 ->
+      IO.puts "kill ya!"
+  end
+end
+```
+If we use a after timeout of 0 seconds, no code in the receive blocks will ever be executed as it will jump straight into the after block when we enter the receive block.
+
 
 # Upto
 page 434
